@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  private var views = [UIView]()
+
   private let customImageView1: CustomImageView = {
     let iv = CustomImageView()
     iv.contentMode = .scaleAspectFill
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
     pageControl.pageIndicatorTintColor = UIColor.lightGray
     pageControl.currentPageIndicatorTintColor = UIColor.black
     pageControl.currentPage = 0
+    pageControl.direction = .topToBottom
 
     return pageControl
   }()
@@ -57,17 +60,15 @@ class ViewController: UIViewController {
   private func displayPageControl() {
     self.view.addSubview(pageControl)
     pageControl.anchor(
-      top: scrollView.bottomAnchor,
-      left: self.view.leftAnchor,
       right: self.view.rightAnchor,
-      width: 80,
-      height: 40)
+      width: 40,
+      height: 120,
+      centerY: self.view.centerYAnchor)
 
     pageControl.addTarget(
       self, action: #selector(self.swichPage),
       for: .valueChanged)
     view.bringSubviewToFront(pageControl)
-
   }
 
   private func displayScrollview() {
@@ -85,25 +86,18 @@ class ViewController: UIViewController {
       width: self.view.frame.size.width * 2,
       height: contentHeight)
 
-    scrollView.addSubview(customImageView1)
-    scrollView.addSubview(customImageView2)
+    views = [customImageView1, customImageView2]
 
-    displayContentsView()
+    for (index, view) in views.enumerated() {
+      view.frame = CGRect(
+        x: CGFloat(index) * self.view.frame.size.width,
+        y: 0,
+        width: self.view.frame.size.width,
+        height: contentHeight)
+      scrollView.addSubview(view)
 
-  }
+    }
 
-  private func displayContentsView() {
-    customImageView1.frame = CGRect(
-      x: 0,
-      y: 0,
-      width: self.view.frame.size.width,
-      height: contentHeight)
-
-    customImageView2.frame = CGRect(
-      x: self.view.frame.size.width,
-      y: 0,
-      width: self.view.frame.size.width,
-      height: contentHeight)
   }
 
   @objc func swichPage() {
