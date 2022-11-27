@@ -26,4 +26,4 @@ Programmatically implement layout.
 The project is availabe under MIT licence.
 
 ## 🙏 Acknowledgments
-- [https://www.irasutoya.com/ かわいいフリー素材集 いらすとや]
+- [かわいいフリー素材集 いらすとや](https://www.irasutoya.com/)
