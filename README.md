@@ -11,7 +11,7 @@
 
 ## 🎥 See It Work
 
-<img src="https://github.com/smapira/Tried-ScrollView-with-ImageView/blob/master/work.gif?raw=true" alt="Demo" width="50%" />
+![work](https://user-images.githubusercontent.com/25024587/204134044-68faf072-402c-4401-8dd8-1c2b05225767.gif)
 
 ## 🏗 Architecture
 
