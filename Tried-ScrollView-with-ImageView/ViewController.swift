@@ -42,6 +42,10 @@ class ViewController: UIViewController {
     pageControl.currentPageIndicatorTintColor = UIColor.black
     pageControl.currentPage = 0
     pageControl.direction = .topToBottom
+    pageControl.allowsContinuousInteraction = true
+    pageControl.setIndicatorImage(UIImage(systemName: "sun.max.fill"), forPage: 0)
+    pageControl.setIndicatorImage(UIImage(systemName: "cloud.sun.fill"), forPage: 1)
+    pageControl.backgroundStyle = .prominent
 
     return pageControl
   }()

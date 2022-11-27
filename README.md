@@ -27,3 +27,5 @@ The project is availabe under MIT licence.
 
 ## 🙏 Acknowledgments
 - [かわいいフリー素材集 いらすとや](https://www.irasutoya.com/)
+- [fuwamaki-media | Swift: UIPageControlが縦向きに対応・画像もセットできるように【WWDC 2022】](https://www.fuwamaki.com/article/356)
+- [UIScrollViewとUIPageControlで別々のページを表示（iOS 14におけるUIPageControlの新機能の紹介を入れて） - Qiita](https://qiita.com/MaShunzhe/items/be52ecd6f8e7b62827f7)
